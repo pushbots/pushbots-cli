@@ -1,9 +1,6 @@
-PushBots
-=============
+# PushBots CLI
 
-# Description
-
-PushBots command line tool.
+PushBots command line interface.
 
 # Usage
 
