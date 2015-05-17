@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+'use strict';
+
+var program  = require('commander');
+
+require('autocmdr/lib/logger')(program);
+require('autocmdr/lib/completion')(program);
+require('autocmdr/lib/package')(program);
+require('autocmdr/lib/help')(program);
+//require('../cmds/login.js')(program);
+// require('../cmds/list.js')(program);
+require('../cmds/install.js')(program);
+require('../cmds/test.js')(program);
+require('../cmds/config.js')(program);
+require('../cmds/remove.js')(program);
+
+program
+	.parse(process.argv);
+
+if (program.args.length < 1 ) {
+	console.log('No command specified. See \'pushbots --help\':');
+	program.outputHelp();
+	process.exit(1);
+}

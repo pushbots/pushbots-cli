@@ -1,0 +1,43 @@
+{
+  "name": "pushbots-cli",
+  "version": "0.0.1",
+  "description": "PushBots command line tool",
+  "bin": {
+    "pushbots": "./bin/pushbots"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "author": {
+    "name": "PushBots",
+    "email": "info@pushbots.com",
+    "url": "http://pushbots.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pushbots/pushbots-cli"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pushbots/pushbots-cli/issues"
+  },
+  "dependencies": {
+    "autocmdr": "~0.0.4",
+    "cli-color": "^1.0.0",
+    "cli-spinner": "^0.2.1",
+    "commander": "~2.0.0",
+    "figlet": "^1.1.0",
+    "follow-redirects": "0.0.3",
+    "jsonfile": "^2.0.0",
+    "libxmljs": "*",
+    "node-dir": "^0.1.8",
+    "prompt": "^0.2.14",
+    "pushbots-api": "0.0.1",
+    "request": "^2.55.0",
+    "temp": "^0.8.1",
+    "underscore": "^1.8.3",
+    "unzip": "^0.1.11"
+  },
+  "devDependencies": {},
+  "readmeFilename": "Readme.md"
+}
