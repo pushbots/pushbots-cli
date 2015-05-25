@@ -1,6 +1,6 @@
 {
   "name": "pushbots-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "PushBots command line tool",
   "bin": {
     "pushbots": "./bin/pushbots"
