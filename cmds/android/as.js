@@ -235,8 +235,8 @@ function addGradleDependency(cb) {
     } else if (supportLibrary == null && pushbotss == null) {
         console.log(clc.red("second"));
 
-        intent = "\tcompile 'com.pushbots:pushbots-lib:2.0.13@aar'\n\
-\tcompile 'com.android.support:support-v4:21.0.0'"
+        intent = "\tcompile 'com.pushbots:pushbots-lib:+@aar'\n\
+\tcompile 'com.android.support:support-v4:+'"
         finalFileContent = androidXml.replace(repalced, repalced + '\n' + intent);
         fs.writeFileSync(gradlePath, finalFileContent);
     }
@@ -266,7 +266,7 @@ function initalizeLibrary(activityName, packageName, cb) {
     var pb = '\t\tPushbots.sharedInstance().init(this);'
     var regexx = new RegExp("package " + packageName + "", "");
     var importLibrary = regexx.exec(readMainActivity);
-    var importSyntax = 'package ' + packageName + restofPackageName+';\n import com.pushbots.*';
+    var importSyntax = 'package ' + packageName + restofPackageName+';\n import com.pushbots.push.Pushbots';
     if (importLibrary.length > 0) {
         //if there's package 
         //lets make sure we don't have pushbots imported
