@@ -21,3 +21,5 @@ Copyright (c) 2015 PushBots
 # Acknowledgments
 
 Built using [generator-commader](https://github.com/Hypercubed/generator-commander).
+
+Thanks for [@drmas](https://github.com/drmas) for his contributions.

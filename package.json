@@ -5,6 +5,10 @@
   "bin": {
     "pushbots": "./bin/pushbots"
   },
+     "contributors": [{
+    "name": "Mohamed Shabaan",
+    "email": "mohamed.shaban@codly.io"
+  }],
   "scripts": {
     "test": "mocha -R spec"
   },
