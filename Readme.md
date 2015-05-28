@@ -8,7 +8,7 @@ Want to quickly set-up your app for notifications from your terminal?
 Install PushBots in your Android and Phonegap application in litterally a few seconds. PushBots CLI will download our SDK, edit your manifest and do all the work for you. You are only two steps away from pure magic.
 
 
-#install
+#Set-up
 To install pushbots-cli from npm, run:
 
 ```
@@ -21,7 +21,7 @@ $ npm install -g pushbots-cli
 # Usage
 
 
-##install
+##Install
 
 ```
 $ pushbots install
@@ -31,7 +31,7 @@ Navigate to your Android project folder (Eclipse/Android Studio) or Phonegap pro
 
 
 
-##remove
+##Remove
 
 ```
 $ pushbots remove
@@ -39,14 +39,14 @@ $ pushbots remove
 Remove pushbots installed in your project.
 
 
-##test
+##Test
 
 ```
 $ pushbots test
 ```
 Send a test push notifications to your device. 
 
-##configure
+##Configure
 
 ```
 $ pushbots config
