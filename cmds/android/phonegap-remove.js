@@ -12,6 +12,7 @@ var sys = require('sys')
 var exec = require('child_process').exec;
 var jf = require('jsonfile')
 var util = require('util')
+var clc = require('cli-color');
 
 
 exports.remove = function() {
@@ -69,18 +70,8 @@ function removePushBotsXML(result) {
 
 function uninitalizeLibrary(result) {
     var readJsFile = fs.readFileSync(path.join('.', 'www', 'js', 'index.js')).toString();
-    var importSyntax = 'if(PushbotsPlugin.isAndroid()){\n\
-        PushbotsPlugin.initialize();\n\
-        PushbotsPlugin.onNotificationClick(myMsgClickHandler);\n\
-\n} if(PushbotsPlugin.isiOS()){\n\
-    PushbotsPlugin.initializeiOS("'+ result.App_ID +'");\n\
-\n}';
-    var replaceAppInitalize = 'function myMsgClickHandler(msg){\n\
-    console.log("Clicked: " + JSON.stringify(msg));\n\
-    alert(msg.message);\n\
-}';
+        var importSyntax = 'var Pushbots = PushbotsPlugin.initialize("' + result.App_ID + '", {"android":{"sender_id":"' + result.GCM_Sender_ID + '"}});';
  var resContent = readJsFile.replace(importSyntax, '');
-var resContent = resContent.replace(replaceAppInitalize, '');
 fs.writeFileSync(path.join('.', 'www', 'js', 'index.js'), resContent);
 
    
