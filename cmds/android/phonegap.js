@@ -58,7 +58,7 @@ function initalizeLibrary(result) {
     if (pattern.length > 0)
         pattern = pattern[0];
     var addBefore = readJsFile.indexOf('PushbotsPlugin.initialize');
-    var importSyntax = 'var Pushbots = PushbotsPlugin.initialize("' + result.App_ID + '", {"android":{"sender_id":"' + result.GCM_Sender_ID + '"}});';
+    var importSyntax = 'window.plugins.PushbotsPlugin.initialize("' + result.App_ID + '", {"android":{"sender_id":"' + result.GCM_Sender_ID + '"}});';
     if (addBefore < 0) {
         var resContent = readJsFile.replace(pattern, pattern + '\n' + importSyntax);
         fs.writeFileSync(path.join('.', 'www', 'js', 'index.js'), resContent);
